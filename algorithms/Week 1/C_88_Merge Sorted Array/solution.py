@@ -22,3 +22,32 @@ class Solution:
         # put any elements in nums2 that had not been placed into nums1
         if j >= 0:
             nums1[:k+1] = nums2[:j+1]
+
+mySol = Solution()
+nums1 = [2,0]
+m = 1
+nums2 = [1]
+n = 1
+mySol.merge(nums1, m, nums2, n)
+print(nums1)
+
+nums1 = [1,2,3,0,0,0]
+m = 3
+nums2 = [2,5,6]
+n = 3
+mySol.merge(nums1, m, nums2, n)
+print(nums1)
+
+nums1 = [1]
+m = 1
+nums2 = []
+n = 0
+mySol.merge(nums1, m, nums2, n)
+print(nums1)
+
+nums1 = [0]
+m = 0
+nums2 = [1]
+n = 1
+mySol.merge(nums1, m, nums2, n)
+print(nums1)
