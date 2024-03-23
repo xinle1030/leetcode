@@ -14,9 +14,6 @@ class Solution:
 
         for i in range(N - 2, -1, -1):
             min_right[i] = min(min_right[i + 1], nums[i])
-        
-        print(max_left)
-        print(min_right)
 
         for i in range(1, N):
             if max_left[i - 1] <= min_right[i]:
