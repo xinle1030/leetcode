@@ -60,12 +60,15 @@ class Solution:
     
     Space Complexity: O(k)
     The solution uses a heap with a maximum of k elements.
+    
+    k largest element is at minimum of min heap which always maintains the k largest elements seen so far
     """
     def findKthLargest2(self, nums: List[int], k: int) -> int:
         minHeap = nums[:k] # do this for space complexity = O(k)
         heapq.heapify(minHeap)
 
         for num in nums[k:]:
+            # maintains the k largest elements seen so far
             if num > minHeap[0]:
                 heapq.heappop(minHeap)
                 heapq.heappush(minHeap, num)
